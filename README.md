@@ -1,13 +1,13 @@
-# Beautiful Login Page In Flutter
+# Beautiful Login Page In Flutter With Reminder-Me Functionality
 
-Create a login and signup page in flutter.
+Create a login and signup page With Reminder-Me in flutter.
 
 This amazing app is provided in open source. So, helpful contributions are highly appreciated.
 
 ## ScreenShots
 
 
-| <img src="screenshots/login.jpg"  width="300"/> | <img src="screenshots/register.jpg" width="300"/>  |
+| <img src="screenshots/loginn.png"  width="300"/> | <img src="screenshots/registerr.png" width="300"/>  |
 
 ---
 
@@ -19,11 +19,11 @@ If you found this project useful, then please consider giving it a :star: on Git
 
 ## Project Created & Maintained By
 
-### Siddharth Chopra
+### Anurag Anand
 
-<a href="https://twitter.com/sidd_art_"><img src="https://github.com/aritraroy/social-icons/blob/master/twitter-icon.png?raw=true" width="60"></a>
-<a href="https://linkedin.com/in/siddharthchopra1/"><img src="https://github.com/aritraroy/social-icons/blob/master/linkedin-icon.png?raw=true" width="60"></a>
-<a href="https://instagram.com/siddharth_chopra"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a>
+
+<a href="https://www.linkedin.com/in/anurag-anand-a51625273/"><img src="https://github.com/aritraroy/social-icons/blob/master/linkedin-icon.png?raw=true" width="60"></a>
+<a href="https://www.instagram.com/aanurag_ssingh/"><img src="https://github.com/aritraroy/social-icons/blob/master/instagram-icon.png?raw=true" width="60"></a>
 
 
 
