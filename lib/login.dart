@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:loginuicolors/home.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -140,7 +141,9 @@ class _MyLoginState extends State<MyLogin> {
                                 child: IconButton(
                                     color: Colors.white,
                                     onPressed: () {
-                                      print('Login Sucess');
+                                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                                        return HomeScreen();
+                                      },),);
                                       login();
                                     },
                                     icon: Icon(
