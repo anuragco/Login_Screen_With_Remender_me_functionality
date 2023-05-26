@@ -7,7 +7,7 @@ This amazing app is provided in open source. So, helpful contributions are highl
 ## ScreenShots
 
 
-| <img src="screenshots/loginn.jpg"  width="300"/> | <img src="screenshots/registerr.jpg" width="300"/>  |
+| <img src="screenshots/login.jpg"  width="300"/> | <img src="screenshots/registerr.jpg" width="300"/>  |
 
 ---
 
