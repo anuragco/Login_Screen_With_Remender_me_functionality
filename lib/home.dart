@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(home());
 }
 
-class MyApp extends StatelessWidget {
+class home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +24,7 @@ class DropdownDatePickerExample extends StatefulWidget {
 }
 
 class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
-  String dropdownValue1 = 'Delhi';
+  String dropdownValue1 = 'Select State';
   DateTime? selectedDate;
   String dropdownValue3 = '';
 
@@ -59,13 +59,14 @@ class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
                 setState(() {
                   dropdownValue1 = newValue!;
                   if (dropdownValue1 == 'Mumbai') {
-                    dropdownValue3 = '19 Celsius';
+                    dropdownValue3 = 'Select Temperature';
                   } else {
                     dropdownValue3 = '';
                   }
                 });
               },
               items: <String>[
+                'Select State',
                 'Mumbai',
                 'Delhi',
               ].map<DropdownMenuItem<String>>((String value) {
@@ -96,6 +97,7 @@ class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
                   });
                 },
                 items: <String>[
+                  'Select Temperature',
                   '19 Celsius',
                   '23 Celsius',
                   '28 Celsius',
@@ -118,6 +120,10 @@ class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
                   print('Selected date: ${selectedDate!.toIso8601String().split('T')[0]}');
                 }
                 print('Dropdown 3: $dropdownValue3');
+                ///////////////Toast Print\\\\\\\\\\\\\\\\\\\\\\\
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text("Data Sucessfully Store"),
+                ));
               },
               child: Text('Submit'),
             ),

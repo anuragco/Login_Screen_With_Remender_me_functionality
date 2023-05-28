@@ -52,7 +52,7 @@ class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/login.png'), fit: BoxFit.cover),
       ),
@@ -142,7 +142,7 @@ class _MyLoginState extends State<MyLogin> {
                                     color: Colors.white,
                                     onPressed: () {
                                       Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-                                        return MyApp();
+                                        return home();
                                       },),);
                                       login();
                                     },
