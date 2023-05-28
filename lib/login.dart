@@ -142,7 +142,7 @@ class _MyLoginState extends State<MyLogin> {
                                     color: Colors.white,
                                     onPressed: () {
                                       Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-                                        return HomeScreen();
+                                        return MyApp();
                                       },),);
                                       login();
                                     },
