@@ -8,11 +8,26 @@ class home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Home Screen',
+      title: 'Home',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: DropdownDatePickerExample(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Home'),
+        ),
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/home.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Center(
+            child: DropdownDatePickerExample(),
+          ),
+        ),
+      ),
     );
   }
 }
@@ -42,18 +57,16 @@ class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
       });
     }
   }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Screen'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            DropdownButton<String>(
+    return Container(
+      padding: EdgeInsets.all(16),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          Container(
+            width: 110,
+            child: DropdownButton<String>(
               value: dropdownValue1,
               onChanged: (String? newValue) {
                 setState(() {
@@ -67,8 +80,8 @@ class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
               },
               items: <String>[
                 'Select State',
-                'Mumbai',
                 'Delhi',
+               'Mumbai',
               ].map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -76,20 +89,22 @@ class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
                 );
               }).toList(),
             ),
-            SizedBox(height: 16),
-            if (selectedDate != null)
-              Text(
-                'Selected Date: ${selectedDate!.toIso8601String().split('T')[0]}',
-                style: TextStyle(fontSize: 16),
-              ),
-            ElevatedButton(
-              onPressed: () => _selectDate(context),
-              child: Text('Select Date'),
+          ),
+          SizedBox(height: 16),
+          if (selectedDate != null)
+            Text(
+              'Selected Date: ${selectedDate!.toIso8601String().split('T')[0]}',
+              style: TextStyle(fontSize: 16),
             ),
-
-            SizedBox(width: 80),
-            if (dropdownValue3.isNotEmpty)
-              DropdownButton<String>(
+          ElevatedButton(
+            onPressed: () => _selectDate(context),
+            child: Text('Select Date'),
+          ),
+          SizedBox(height: 16),
+          if (dropdownValue3.isNotEmpty)
+            Container(
+              width: 170,
+              child: DropdownButton<String>(
                 value: dropdownValue3,
                 onChanged: (String? newValue) {
                   setState(() {
@@ -98,11 +113,11 @@ class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
                 },
                 items: <String>[
                   'Select Temperature',
-                  '19 Celsius',
-                  '23 Celsius',
-                  '28 Celsius',
-                  '34 Celsius',
-                  '38 Celsius',
+                  '23 Celcius',
+                  '25 Celcius',
+                  '27 Celcius',
+                  '29 Celcius',
+                  '32 Celcius',
                 ].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -110,8 +125,11 @@ class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
                   );
                 }).toList(),
               ),
-            SizedBox(width: 100.0),
-            ElevatedButton(
+            ),
+          SizedBox(height: 16),
+          Container(
+            width: 100,
+            child: ElevatedButton(
               onPressed: () {
                 // Perform submit action with the selected values and date
                 print('Selected values:');
@@ -120,15 +138,11 @@ class _DropdownDatePickerExampleState extends State<DropdownDatePickerExample> {
                   print('Selected date: ${selectedDate!.toIso8601String().split('T')[0]}');
                 }
                 print('Dropdown 3: $dropdownValue3');
-                ///////////////Toast Print\\\\\\\\\\\\\\\\\\\\\\\
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text("Data Sucessfully Store"),
-                ));
               },
               child: Text('Submit'),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
